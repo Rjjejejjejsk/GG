@@ -1,49 +1,66 @@
-﻿<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Крилаті фрази України</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1>🌻 Крилаті фрази українською</h1>
-        <p>Довідник прислів'їв, афоризмів та словесних перлин</p>
-    </header>
+document.addEventListener('DOMContentLoaded', () => {
+    // Приклад бази даних фраз
+    const phrases = [
+        {
+            text: "Хто не ризикує, той не п'є шампанського",
+            author: "Народна мудрість",
+            category: "прислів'я",
+            keywords: ["ризик", "алкоголь"]
+        },
+        {
+            text: "Україна – це не регіон, а ідея",
+            author: "Богдан Гаврилишин",
+            category: "афоризм",
+            keywords: ["Україна", "ідея"]
+        },
+        // Додайте інші фрази тут...
+    ];
 
-    <main>
-        <section class="search-section">
-            <input type="text" id="search" placeholder="Шукати за автором, словом...">
-            <button id="search-btn">Пошук</button>
-        </section>
+    // Перемикання між вкладками
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.search-section').forEach(s => s.classList.remove('active'));
+            
+            btn.classList.add('active');
+            document.getElementById(btn.dataset.tab).classList.add('active');
+        });
+    });
 
-        <section class="filters">
-            <select id="category-filter">
-                <option value="">Усі категорії</option>
-                <option value="прислів'я">Прислів'я</option>
-                <option value="афоризм">Афоризми</option>
-                <option value="каламбур">Каламбури</option>
-            </select>
-        </section>
+    // Пошук за автором
+    document.querySelectorAll('.author-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const author = btn.dataset.author;
+            const filtered = phrases.filter(p => p.author === author);
+            renderResults(filtered);
+        });
+    });
 
-        <section class="results" id="results">
-            <!-- Приклад однієї фрази -->
+    // Пошук за ключовими словами
+    document.getElementById('keyword-search-btn').addEventListener('click', () => {
+        const keyword = document.getElementById('keyword-input').value.toLowerCase();
+        const filtered = phrases.filter(p => 
+            p.keywords.some(kw => kw.toLowerCase().includes(keyword)) ||
+            p.text.toLowerCase().includes(keyword)
+        );
+        renderResults(filtered);
+    });
+
+    // Функція для відображення результатів
+    function renderResults(phrasesToShow) {
+        const resultsDiv = document.getElementById('results');
+        resultsDiv.innerHTML = phrasesToShow.map(phrase => `
             <div class="phrase-card">
-                <blockquote>"Хто не ризикує, той не п'є шампанського"</blockquote>
+                <blockquote>"${phrase.text}"</blockquote>
                 <div class="phrase-meta">
-                    <span class="author">Народна мудрість</span>
-                    <span class="category">прислів'я</span>
+                    <span class="author">${phrase.author}</span>
+                    <span class="category">${phrase.category}</span>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2023 Українські крилаті вислови</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        `).join('');
+        
+        if (phrasesToShow.length === 0) {
+            resultsDiv.innerHTML = '<p>Нічого не знайдено. Спробуйте інший запит.</p>';
+        }
+    }
+});
