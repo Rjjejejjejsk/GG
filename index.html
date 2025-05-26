@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крилаті фрази України</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🌻 Крилаті фрази українською</h1>
+        <p>Довідник прислів'їв, афоризмів та словесних перлин</p>
+    </header>
+
+    <main>
+        <!-- Дві системи пошуку -->
+        <div class="search-tabs">
+            <button class="tab-btn active" data-tab="author-search">Пошук за автором</button>
+            <button class="tab-btn" data-tab="keyword-search">Пошук за ключовими словами</button>
+        </div>
+
+        <!-- Пошук за автором -->
+        <section id="author-search" class="search-section active">
+            <h2>Популярні українські автори</h2>
+            <div class="authors-grid">
+                <!-- 15 популярних авторів -->
+                <button class="author-btn" data-author="Тарас Шевченко">Тарас Шевченко</button>
+                <button class="author-btn" data-author="Леся Українка">Леся Українка</button>
+                <button class="author-btn" data-author="Іван Франко">Іван Франко</button>
+                <button class="author-btn" data-author="Ліна Костенко">Ліна Костенко</button>
+                <button class="author-btn" data-author="Богдан Гаврилишин">Богдан Гаврилишин</button>
+                <button class="author-btn" data-author="Василь Стус">Василь Стус</button>
+                <button class="author-btn" data-author="Олександр Довженко">Олександр Довженко</button>
+                <button class="author-btn" data-author="Михайло Коцюбинський">Михайло Коцюбинський</button>
+                <button class="author-btn" data-author="Лесь Подерв'янський">Лесь Подерв'янський</button>
+                <button class="author-btn" data-author="Народна мудрість">Народна мудрість</button>
+                <button class="author-btn" data-author="Володимир Винниченко">Володимир Винниченко</button>
+                <button class="author-btn" data-author="Ольга Кобилянська">Ольга Кобилянська</button>
+                <button class="author-btn" data-author="Юрій Андрухович">Юрій Андрухович</button>
+                <button class="author-btn" data-author="Сергій Жадан">Сергій Жадан</button>
+                <button class="author-btn" data-author="Оксана Забужко">Оксана Забужко</button>
+            </div>
+        </section>
+
+        <!-- Пошук за ключовими словами -->
+        <section id="keyword-search" class="search-section">
+            <h2>Пошук за ключовими словами</h2>
+            <div class="keyword-search-box">
+                <input type="text" id="keyword-input" placeholder="Введіть ключове слово (напр., 'життя', 'любов')">
+                <button id="keyword-search-btn">Знайти</button>
+            </div>
+        </section>
+
+        <!-- Результати -->
+        <section class="results" id="results">
