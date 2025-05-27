@@ -18,6 +18,7 @@
         <div class="search-tabs">
             <button class="tab-btn active" onclick="openTab(event,'author-search')">Пошук за автором</button>
             <button class="tab-btn" onclick="openTab(event,'keyword-search')">Пошук за ключовими словами</button>
+            <button class="tab-btn" onclick="openTab(event,'source-search')">Пошук за джерелом</button>
         </div>
 
         <!-- Пошук за автором -->
@@ -35,7 +36,10 @@
                 <input type="text" id="keyword-input" placeholder="Введіть слово або частину тексту...">
                 <button id="keyword-search-btn">Знайти</button>
             </div>
-            
+        </div>
+
+        <!-- Пошук за джерелом -->
+        <div id="source-search" class="tab-content" style="display: none;">
             <h2>Пошук за джерелом</h2>
             <div class="keyword-search-box">
                 <input type="text" id="source-input" placeholder="Введіть джерело (напр. 'Драми, 1902')...">
@@ -67,4 +71,4 @@
     <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
-</html>﻿
+</html>
