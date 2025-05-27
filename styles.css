@@ -1,4 +1,4 @@
-﻿/* Глобальні стилі */
+/* Глобальні стилі */
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
@@ -45,10 +45,10 @@ header h1 {
     transition: all 0.3s;
 }
 
-    .tab-btn.active {
-        color: #0057b7;
-        border-bottom: 2px solid #ffd700;
-    }
+.tab-btn.active {
+    color: #0057b7;
+    border-bottom: 2px solid #ffd700;
+}
 
 .tab-content {
     display: none;
@@ -73,12 +73,12 @@ header h1 {
     transition: all 0.2s;
 }
 
-    .author-btn:hover {
-        background: #ffd700;
-        transform: translateY(-2px);
-    }
+.author-btn:hover {
+    background: #ffd700;
+    transform: translateY(-2px);
+}
 
-/* Пошук за ключовим словами */
+/* Пошукові поля */
 .keyword-search-box {
     display: flex;
     gap: 10px;
@@ -105,10 +105,10 @@ header h1 {
     transition: all 0.2s;
 }
 
-    #keyword-search-btn:hover,
-    #source-search-btn:hover {
-        background: #e6c200;
-    }
+#keyword-search-btn:hover,
+#source-search-btn:hover {
+    background: #e6c200;
+}
 
 /* Категорії */
 .categories-section {
@@ -135,10 +135,10 @@ header h1 {
     font-weight: 500;
 }
 
-    .category-btn:hover {
-        background: #bbdefb;
-        transform: translateY(-2px);
-    }
+.category-btn:hover {
+    background: #bbdefb;
+    transform: translateY(-2px);
+}
 
 /* Результати */
 .results {
@@ -154,10 +154,10 @@ header h1 {
     transition: all 0.3s;
 }
 
-    .phrase-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
+.phrase-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
 blockquote {
     font-style: italic;
