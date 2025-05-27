@@ -1,4 +1,4 @@
-﻿const phrases = getAllPhrases();
+const phrases = getAllPhrases();
 const authors = getAllAuthors();
 const categories = [...new Set(phrases.map(p => p.category))];
 
