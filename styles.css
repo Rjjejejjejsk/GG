@@ -1,0 +1,232 @@
+﻿/* styles.css — без змін  */
+/* Глобальні стилі */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #0057b7 0%, #ffd700 100%);
+    color: white;
+    border-radius: 8px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #0057b7;
+}
+
+header h1 {
+    color: white;
+}
+
+/* Вкладки */
+.search-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #666;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+    .tab-btn.active {
+        color: #0057b7;
+        border-bottom: 2px solid #ffd700;
+    }
+
+.tab-content {
+    display: none;
+    padding: 20px 0;
+}
+
+/* Автори */
+.authors-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filter-btn {
+    padding: 8px 15px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.2s;
+}
+
+    .filter-btn.active, .filter-btn:hover {
+        background: #ffd700;
+        font-weight: bold;
+    }
+
+.authors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.author-btn {
+    padding: 10px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+    .author-btn:hover {
+        background: #ffd700;
+        transform: translateY(-2px);
+    }
+
+/* Пошук за ключовим словами */
+.keyword-search-box {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+#keyword-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#keyword-search-btn {
+    padding: 10px 20px;
+    background: #ffd700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+    #keyword-search-btn:hover {
+        background: #e6c200;
+    }
+
+/* Категорії */
+.categories-section {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.category-btn {
+    padding: 12px;
+    background: #e3f2fd;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+    .category-btn:hover {
+        background: #bbdefb;
+        transform: translateY(-2px);
+    }
+
+/* Результати */
+.results {
+    margin-top: 30px;
+}
+
+.phrase-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+    .phrase-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+blockquote {
+    font-style: italic;
+    margin: 0 0 10px 0;
+    padding-left: 15px;
+    border-left: 3px solid #ffd700;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.phrase-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.author {
+    font-weight: bold;
+    color: #0057b7;
+}
+
+.welcome-message {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+/* Підвал */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #666;
+    font-size: 0.9em;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+}
+/* styles.css — оновлені стилі */
+/* Додамо стилі для нових елементів */
+
+/* Нова вкладка пошуку */
+#source-search {
+    padding: 20px 0;
+}
+
+/* Заголовок з вибраним автором */
+#selected-author {
+    color: #0057b7;
+    font-weight: bold;
+}
+
+/* Інші стилі залишаються без змін */
+/* ... */
