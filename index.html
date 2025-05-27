@@ -1,0 +1,76 @@
+﻿<!-- index.html -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Крилаті фрази України</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🌻 Крилаті фрази українською</h1>
+        <p>Довідник прислів'їв, приказок, афоризмів, каламбурів, інших словесних курйозів</p>
+    </header>
+
+    <main>
+        <!-- Вкладки пошуку -->
+        <div class="search-tabs">
+            <button class="tab-btn active" onclick="openTab(event,'author-search')">Пошук за автором</button>
+            <button class="tab-btn" onclick="openTab(event,'keyword-search')">Пошук за ключовими словами</button>
+            <button class="tab-btn" onclick="openTab(event,'source-search')">Пошук за джерелом</button>
+        </div>
+
+        <!-- Пошук за автором -->
+        <div id="author-search" class="tab-content" style="display:block">
+            <h2>Оберіть автора</h2>
+            <div class="authors-filter">
+                <button class="filter-btn active" onclick="filterAuthors('all')">Усі автори</button>
+                <button class="filter-btn" onclick="filterAuthors('literature')">Літератори</button>
+                <button class="filter-btn" onclick="filterAuthors('folk')">Народні</button>
+            </div>
+            <div class="authors-grid" id="authors-grid"></div>
+        </div>
+
+        <!-- Пошук за ключовими словами -->
+        <div id="keyword-search" class="tab-content">
+            <h2>Пошук за ключовими словами</h2>
+            <div class="keyword-search-box">
+                <input type="text" id="keyword-input" placeholder="Введіть слово або частину тексту…">
+                <button id="keyword-search-btn">Знайти</button>
+            </div>
+        </div>
+
+        <!-- Пошук за джерелом -->
+        <div id="source-search" class="tab-content">
+            <h2>Пошук за джерелом</h2>
+            <div class="keyword-search-box">
+                <input type="text" id="source-input" placeholder="Напр. Поезії, 1840…">
+                <button id="source-search-btn">Знайти</button>
+            </div>
+        </div>
+
+        <!-- Категорії -->
+        <div class="categories-section">
+            <h2>Категорії</h2>
+            <div class="categories-grid" id="categories-grid"></div>
+        </div>
+
+        <!-- Результати -->
+        <section class="results" id="results">
+            <div class="welcome-message">
+                <h3>Ласкаво просимо!</h3>
+                <p>Оберіть автора, категорію або скористайтесь пошуком</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Українські крилаті вислови</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
