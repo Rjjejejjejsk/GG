@@ -1,4 +1,4 @@
-/* Глобальні стилі */
+
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
@@ -27,7 +27,7 @@ header h1 {
     color: white;
 }
 
-/* Вкладки */
+
 .search-tabs {
     display: flex;
     margin-bottom: 20px;
@@ -55,7 +55,7 @@ header h1 {
     padding: 20px 0;
 }
 
-/* Автори */
+
 .authors-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -78,7 +78,7 @@ header h1 {
     transform: translateY(-2px);
 }
 
-/* Пошукові поля */
+
 .keyword-search-box {
     display: flex;
     gap: 10px;
@@ -110,7 +110,7 @@ header h1 {
     background: #e6c200;
 }
 
-/* Категорії */
+
 .categories-section {
     margin: 30px 0;
     padding: 20px;
@@ -140,7 +140,7 @@ header h1 {
     transform: translateY(-2px);
 }
 
-/* Результати */
+
 .results {
     margin-top: 30px;
 }
@@ -186,7 +186,7 @@ blockquote {
     color: #666;
 }
 
-/* Підвал */
+
 footer {
     text-align: center;
     margin-top: 40px;
