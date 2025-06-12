@@ -39,7 +39,7 @@ function renderResults(list, title) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Автори
+    
     const ag = document.getElementById('authors-grid');
     authors.forEach(a => {
         const btn = document.createElement('button');
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ag.appendChild(btn);
     });
 
-    // Пошук по ключовим словам
+    
     document.getElementById('keyword-search-btn').onclick = () => {
         const q = document.getElementById('keyword-input').value.trim().toLowerCase();
         const found = phrases.filter(p =>
@@ -64,14 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
         renderResults(found, `Результати пошуку: "${q}"`);
     };
 
-    // Пошук по джерелу
+    
     document.getElementById('source-search-btn').onclick = () => {
         const q = document.getElementById('source-input').value.trim().toLowerCase();
         const found = phrases.filter(p => p.source.toLowerCase().includes(q));
         renderResults(found, `Результати пошуку за джерелом: "${q}"`);
     };
 
-    // Категорії
+   
     const cg = document.getElementById('categories-grid');
     categories.forEach(c => {
         const btn = document.createElement('button');
